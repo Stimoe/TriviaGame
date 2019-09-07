@@ -1,7 +1,4 @@
-body {
-    width: 70%;
-    margin: 0 auto;
-}
+
 .container {
     
   margin: auto;
@@ -14,4 +11,34 @@ body {
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
             border-radius: 8px;
+}
+img {
+  max-width: 500px;
+  max-height: 500px;
+}
+h1 {
+  background-color: burlywood;
+}
+#time{
+  color: red;
+  background-color: tan;
+  width: 70%;
+}
+#question {
+  background-color: lightgreen;
+  color: brown;
+}
+#images {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+#correct-answer {
+  color: red;
+  background-color: tan;
+  width: 70%;
+}
+.question {
+  color:#F2EDD7FF;
+  font-size: 200%;
 }

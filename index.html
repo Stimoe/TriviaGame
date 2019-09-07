@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets\css\style.css" />
 </head>
 
-<body>
+<body background="https://i.imgur.com/PUNcSzF.jpg">
     <div class="container">
         <div class="row">
             <div class="col-xl-8">
@@ -21,63 +21,93 @@
         </div>
         <br>
         <div id="time" class="row">
-            <div class="col-md-8">
-                <p id="timeleft">Time remaining<span id="Current-time-left"></span></p>
+            <div class="col-md-12">
+                <h2 id="timeleft">Time remaining<span id="Current-time-left"></span></h2>
 
             </div>
-
         </div>
         <div class="row">
             <div class="col-md-8">
                 <h2 id="question"><span id="currentQuestion"></span></h2>
             </div>
-
         </div>
         <br>
         <div id="answer1" class="row">
             <div class="col-lg-3 btn btn-choice">
-                <button type="button" class="btn btn-primary btn-xlarge"></button>
+                <button id="button1" type="button" class="btn btn-primary btn-xlarge">Click me</button>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-6 question">
                 <h3><span id="first-answer"></span></h3>
             </div>
         </div>
-    <!-- </div> -->
-
-
-
-    <div id="answer2" class="row">
-        <div class="col-lg-3 btn btn-choice">
-            <button type="button" class="btn btn-primary btn-xlarge"></button>
+        <div id="answer2" class="row">
+            <div class="col-lg-3 btn btn-choice">
+                <button id="button2" type="button" class="btn btn-primary btn-xlarge">Click me</button>
+            </div>
+            <div class="col-lg-6 question">
+                <h3><span id="second-answer"></span></h3>
+            </div>
         </div>
-        <div class="col-lg-9">
-            <h3><span id="second-answer"></span></h3>
+        <div id="answer3" class="row">
+            <div class="col-lg-3 btn btn-choice">
+                <button id="button3" type="button" class="btn btn-primary btn-xlarge">Click me</button>
+            </div>
+            <div class="col-lg-6 question">
+                <h3><span id="third-answer"></span></h3>
+            </div>
         </div>
-
-    </div>
-    
-    <div id="answer3" class="row">
-        <div class="col-lg-3 btn btn-choice">
-            <button type="button" class="btn btn-primary btn-xlarge"></button>
-        </div>
-        <div class="col-lg-9">
-            <h3><span id="third-answer"></span></h3>
-        </div>
-    </div>
-    
-    <div id="answer4" class="row">
-        <div class="col-lg-3 btn btn-choice">
-            <button type="button" class="btn btn-primary btn-xlarge"></button>
-        </div>
-        <div class="col-lg-9">
-            <h3><span id="fourth-answer"></span></h3>
+        <div id="answer4" class="row">
+            <div class="col-lg-3 btn btn-choice">
+                <button id="button4" type="button" class="btn btn-primary btn-xlarge">Click me</button>
+            </div>
+            <div class="col-lg-6 question">
+                <h3><span id="fourth-answer"></span></h3>
+            </div>
         </div>
     </div>
-    
+    <div id=images>
+        <div>
+            <h2 id="correct-image">
+                <img src="https://i.imgur.com/1bmZ2bU.jpg" alt="correct">
+            </h2>
+        </div>
 
+        <div>
+            <div id="incorrect-image">
+                <img src="https://i.imgur.com/uY85nEZ.jpg" alt="incorrect">
+
+            </div>
+            <h2 id="correct-answer">
+
+            </h2>
+        </div>
+        <div>
+            <h2 id="time-out">
+                <img src="https://i.imgur.com/imGWDeJ.png" alt="timeout">
+
+            </h2>
+        </div>
+        <div>
+            <div>
+                <div id="coffee">    
+                </div>
+              
+            </div>
+        </div>
+       
+
+        <div id="wins" class="row">
+            <div class="col-md-8">
+                <p id="total-wins"><span id="wins-at-end"></span></p>
+            </div>
+        </div>
+        <div id="losses" class="row">
+            <div class="col-md-8">
+                <p id="total-losses"><span id="losses-at-end"></span></p>
+            </div>
+        </div>
+        <input id="reset-button" class="btn btn-primary" type="reset" value="Reset">
     </div>
-   
-
 
 
 
