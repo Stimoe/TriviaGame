@@ -34,13 +34,13 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  width:  400px;
-  height: 400px;
+  /* width: 50%; */
+  /* width:  auto;
+  height: auto;
   background-position: 50% 50%;
   background-repeat:   no-repeat;
   background-size:     cover;
-  object-fit: cover;
+  object-fit: cover; */
 }
 #correct-answer {
   color: red;
@@ -58,11 +58,21 @@ h1 {
   text-align: center;
 }
 #incorrect-image {
-  Margin-left: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-#time-out{
-  margin-left: 10%;
+#correct-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+#time-out {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #reset {
   margin: auto;
   text-align: center;
