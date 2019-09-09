@@ -80,7 +80,7 @@ function decrement() {
             $(".container").show();
             questionIndex++;
             renderQuestion();
-        }, 1000)
+        }, 2500)
         losses++
     }
 }
@@ -95,7 +95,7 @@ function answerCorrect() {
         $("#correct-image").hide();
         $(".container").show();
         renderQuestion();
-    }, 1000);
+    }, 2500);
     wins++
 }
 //this is for when the user chooses the button that correlates with a incorrect answer.
@@ -113,7 +113,7 @@ function wrongAnswer() {
         $(".container").show();
 
         renderQuestion();
-    }, 1000);
+    }, 2500);
     losses++
 }
 //this checks if the button that they choose is correct or not, and calls the correlating function.
