@@ -5,7 +5,6 @@ var intervalId;
 var wins = 0;
 var losses = 0;
 
-
 //This is my array of objects that i can call in a certain order.
 var questions = [
     { q: "How many pounds of coffee (green beans) can be harvested from one tree in one year?", a: ["1lb", "5lb", "10lb", "20lb"], cr: "1lb", image: 'https://i.imgur.com/lpbD2R0.jpg' },
@@ -24,18 +23,18 @@ var questions = [
 function renderQuestion() {
     if (questionIndex === questions.length) {
         $(".container").hide();
+        $("#coffee").empty();
         $("#score").show();
         $("#reset-button").show();
-        $("#images").hide();
         $("#wins-at-end").text("Total wins = " + wins);
-        $("#losses-at-end").text("Total losses = " + losses);
-        // $("#reset-button").show();    
+        $("#losses-at-end").text("Total losses = " + losses);  
     }
     //if the user has not finished answering the questions, i set the timer, and roll through the object of questions and answers.
     time = 20;
     $("#Current-time-left").text("  " + time);
     start()
     if (questionIndex <= (questions.length - 1)) {
+        $(".container").show()
         $("#correct-image").hide();
         $('#coffee').hide()
         $("#incorrect-image").hide();
@@ -47,6 +46,15 @@ function renderQuestion() {
         $("#button3").text(questions[questionIndex].a[2]);
         $("#button4").text(questions[questionIndex].a[3]);
     }
+}
+function restart(){
+    questionIndex=0
+
+    $("#score").hide();
+    wins = 0;
+    losses = 0;
+    start();
+    renderQuestion();
 }
 //once a question is chosen i start the timer.
 function start() {
@@ -62,8 +70,8 @@ function decrement() {
         $("#time-out").show();
         $('#coffee').show()
         $('#coffee').append("<img src=" + questions[questionIndex].image + ">")
-        $("#correct-answer").text("You ran out of time, the correct answer was " + questions[questionIndex].cr + " ");
-        // $("#time-out").append("You ran out of time, the correct answer was " + questions[questionIndex].cr)
+        $("#correct-answer").append("You ran out of time, the correct answer was " + questions[questionIndex].cr + " ");
+       
         //this is a timed event for showing them certain results about the last question then showing and hiding different divs.
         setTimeout(function () {
             $('#coffee').empty();
@@ -72,7 +80,7 @@ function decrement() {
             $(".container").show();
             questionIndex++;
             renderQuestion();
-        }, 3000)
+        }, 1000)
         losses++
     }
 }
@@ -87,7 +95,7 @@ function answerCorrect() {
         $("#correct-image").hide();
         $(".container").show();
         renderQuestion();
-    }, 3000);
+    }, 1000);
     wins++
 }
 //this is for when the user chooses the button that correlates with a incorrect answer.
@@ -105,7 +113,7 @@ function wrongAnswer() {
         $(".container").show();
 
         renderQuestion();
-    }, 3000);
+    }, 1000);
     losses++
 }
 //this checks if the button that they choose is correct or not, and calls the correlating function.
@@ -152,9 +160,17 @@ $(document).ready(function () {
     })
     //this sets up the reset button at the end.
     $("#reset-button").on("click", function () {
-        location.reload(true)
-    })
+        // if (questionIndex === questions.length){
+        // console.log("reset pushed")
+        restart();
+        
+        }
+      ) 
+   
 })
+
+    
+
 start()
 renderQuestion()
 
